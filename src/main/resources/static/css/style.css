@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #008F4B;
+    font-family: 'Lexend Zetta', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    color: white;
+    margin-left: 5em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding-bottom: 2em;
+}
+
+#logo {
+    font-size: clamp(2em, 2vw, 30%);
+}
+
+.designFrame {
+    height: 100vh;
+    width: fit-content;
+}
+
+.designFrame h1 {
+    font-size: clamp(1.2em, 3vw, 2.1em);
+}
+
+.designFrame p {
+    font-family: 'lexend deca', sans-serif;
+    font-size: clamp(1.3em, 2vw, 2em);
+    color: black;
+    text-align: left;
+    line-height: 1.8em;
+    margin: 0;
+    margin-left: 1.6em;
+    padding: 0;
+}
+
+.loginFrame {
+    border-radius: 6% 0 0 6%;
+    height: 100vh;
+    width: 70%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+#loginArea {
+    background-image: url('/assets/login/loginImg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100dvh;
+    width: 95%;
+    color: black;
+    font-family: 'Lexend deca', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#loginArea h1 {
+    font-size: clamp(0.9em, 2vw, 2em);
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+}
+
+#loginArea h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1dvh;
+    background: linear-gradient(to right, #13c974, #37d437, #0f4b07);
+    margin-top: 0.5em;
+    transition: 250ms;
+}
+
+#loginArea h1:hover::after {
+    width: 100%;
+}
+
+#loginArea form {
+    min-width: 80%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#loginArea form label {
+    margin: 0;
+    padding-left: 3%;
+    font-size: 0.5em;
+}
+
+input {
+    font-family: 'Lexend deca', sans-serif;
+    width: clamp(2.5em, 80%, 20em);
+    border-radius: 11px;
+    height: 6dvh;
+    margin: .7em 0 0 0;
+    font-size: clamp(0.2em, 4vw, 1.2em);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+    padding-left: .5em;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+#loginArea form button { /* log in button */
+    margin-top: 1em;
+    background: #28BA74;
+    font-family: 'Lexend deca', sans-serif;
+    font-size: clamp(0.7em, 3vw, 1.5em);
+    min-width: 30%;
+    height: 6dvh;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 250ms;
+    margin-bottom: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+
+}
+
+#loginArea form button:hover {
+    background: #13c974;
+}
+
+#lowerSignupArea {
+    width: 100%;
+    height: fit-content;
+}
+
+#lowerSignupArea p {
+    font-size: clamp(0.9em, 2vw, 1.5em);
+}
+
+#lowerSignupArea p a {
+    text-decoration: none;
+}
+
+#lowerSignupArea p a:active {
+    color: white;
+}
+
+#lowerSignupArea p a:visited {
+    color: #008F4B;
+}
+
+#lowerSignupArea p a:hover,
+#lowerSignupArea p a:active:hover,
+#lowerSignupArea p a:visited:hover {
+    color: #13c974;
+    transition: 250ms;
+}
+
+#loginWithArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 2em 0 1em 0;
+}
+
+#loginWithArea::before,
+#loginWithArea::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: black;
+}
+
+#loginWithArea::before {
+    margin-right: 10px;
+}
+
+#loginWithArea::after {
+    margin-left: 10px;
+}
+
+.SocialMediaArea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+    column-gap: 7em;
+    max-width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.SocialMediaArea button {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    gap: 8px;
+    font-size: clamp(0.5em, 2vw, 0.7em);
+    width: 100%;
+    min-width: 50%;
+    height: 6dvh;
+    font-family: 'lexend deca', sans-serif;
+    border-radius: 11px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px black solid;
+    transition: 250ms;
+}
+
+.SocialMediaArea button:hover {
+    background: #13c974;
+    cursor: pointer;
+}
+
+.SocialMediaArea button svg {
+    height: 2em;
+    width: 2em;
+    
+}
+
+@media (max-width: 1000px) {
+    .SocialMediaArea {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1em;
+        column-gap: 1em;
+
+    }
+
+}
+
+@media (max-width: 650px) {
+    body {
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin-left: 0;
+    }
+
+    .designFrame {
+        display: flex;
+        height: clamp(12dvh, 40vw, 12dvh);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .designFrame #logo {
+        width: 20%;
+    }
+
+    #header h1 {
+        font-size: 3em;
+    }
+
+    .designFrame p {
+        display: none;
+    }
+
+    .designFrame h1 {
+        font-size: clamp(1.5em, 20vw, 1em);
+    }
+
+    .loginFrame {
+        border-radius: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+    #loginArea {
+        min-height: fit-content;
+        width: 100%;
+    }
+}
+
+/* Sign up part */
+.username {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

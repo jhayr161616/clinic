@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="robots" content="noarchive">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="stylesheet" href="\css\client.css">
+<!--    <link rel="stylesheet" href="/css/client.css">-->
+
+
+
+    <style>
+       
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <input type="checkbox" id="check">
+        <div class="accountContent">
+            <a href="">Settings</a>
+            <a href="">Account</a>
+            <form th:action="@{/logout}" method="post" >
+                <button type="submit" id="logout-btn">Logout</button>
+            </form> 
+        </div>
+
+        <h1>LINKARE</h1>
+
+
+    
+
+    </header>
+
+    <div id="main">
+        <h1><span style="color: white;">LINKARE</span><span style="color: #004926;"> When You<br> Need It.</span></h1>
+
+        <div class="anchors">
+            <a href="" style="background-color: #004926;">FAQ</a>
+            <a href="" style="background-color: #008F4B">CONTACT</a>
+        </div>
+
+        <div class="lowerMain">
+            <h1 style="color: #004926; line-height: 2.5;" id="tagline">MAKE AN<br>WHENEVER<br>WHEREVER</h1>
+            <div class="appointmentArea">
+                <h1 style="color: #008F4B; padding-top: 1.5em; margin-left: 1em;">APPOINTMENT...</h1>
+
+                <div class="buttons">
+                    <a href="#areaTwo">HERE</a>
+                    <a href="#areaThree">HOSPITALS</a>
+                    <a href="#areaFour">APPOINTMENT STATUS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="areaTwo">
+    
+    </div>
+
+    <div id="areaThree">
+
+        </div>
+
+    <div id="areaFour">
+
+    </div>
+
+
+
+</div>
+
+</body>
+
+</html>

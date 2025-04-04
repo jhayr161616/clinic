@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --headerSize: clamp(0.5em, 2vw,.7em);;
+}
+body {
+
+    background-color: #f5f5f5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+    overflow: auto;
+}
+header {
+    background-color: #008F4B;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+
+
+
+
+header input[type="checkbox"]{
+
+    appearance: none;
+    -webkit-appearance: none;
+    height: fit-content;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(0.7); /* Shrinks the entire element */
+}
+
+header input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    content: url("/assets/client/accountBTN.png");
+    font-weight: 200;
+    color: white;
+    font-size: 1em;
+    backdrop-filter: initial;
+
+
+}
+header input[type="checkbox"]:hover::after{
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+    transition: 250MS;
+}
+
+
+header .accountContent{
+    display: none;
+    border: 2px 2px 0 2px;
+    flex-direction: column;
+    position: absolute;
+    top: 5.2em;
+    backdrop-filter: blur(3px);
+ 
+    width: 150px;
+}
+
+header .accountContent a{
+    text-align: left;
+    text-decoration: none;
+    color: #002614;
+    flex-basis: 50px;
+    align-content: center   ;
+    background-color: #00492686;
+    font-weight: 700;
+    width: 150px;
+    text-align: center;
+}
+
+
+
+header .accountContent a:hover{
+    background-color: rgba(54, 156, 64, 0.801);
+    transition: 250ms;
+}
+
+#check:checked + .accountContent {
+    display: flex;
+    transition: 0.25s ease-in-out;
+}
+
+.accountContent form{
+    flex-basis: 50px;
+    width: 150px;
+    
+}
+#logout-btn {
+    text-align: left;
+    text-decoration: none;
+    color: #002614;
+    border: none;
+    min-height: 100%;
+    background-color: #00492686;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    flex-grow: 0;
+    text-align: center;
+    
+}
+
+#logout-btn:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+
+header h1{
+    font-size: clamp(1em, 5vw, 2em);
+}
+
+
+
+
+/* main content */
+
+
+#main{
+    background-image: url("/assets/client/clientBG.png");
+    min-height: inherit;
+    width: 100%;
+
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#main h1{
+    padding: 1em 0em 2em 0em;
+    font-size: clamp(1.8em, 2.5vw, 5em);
+}
+
+#main .anchors{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: fit-content
+
+
+}
+
+#main .anchors a{
+    text-decoration: none;
+    flex-basis: clamp(3em, 10vw, 5em);
+    color: white;
+    align-content: center;
+}
+
+.lowerMain{
+
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    flex-grow: 1;
+}
+
+.appointmentArea{
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 100%;
+
+}
+
+.appointmentArea .buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.appointmentArea .buttons a{
+    text-decoration: none;
+    color: white;
+
+    text-align: center;
+    background-color: #004926;
+    flex-basis: clamp(25em, 20vw, 50em);
+    min-height: 4.5em;
+    border-radius: 10em;
+    align-content: center;
+    font-size: clamp(.1em, 3vw, .8em);
+}
+
+.appointmentArea .buttons a:hover{
+    background-color: #00753d;
+    transition: 250ms;
+}
+
+
+
+
+@media (max-width: 1300px){
+    .appointmentArea .buttons{
+        flex-direction: column;
+    }
+
+    .appointmentArea .buttons a{
+        flex-basis:1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    #main .lowerMain #tagline{
+        display: none;
+
+    }
+
+    #main h1:first-child{
+        text-align: center;
+    }
+    .appointmentArea h1:nth-child(1){
+        margin: 0 !important;
+        padding: 0;
+    }
+}
+
+
+#areaTwo{
+    width: 100%;
+    background-color: red;
+    min-height: 100dvh;
+}
+
+#areaThree{
+    width: 100%;
+    background-color: blue;
+    min-height: 100dvh;
+}
+
+#areaFour{
+    width: 100%;
+    background-color: pink;
+    min-height: 100dvh;
+}
+

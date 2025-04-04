@@ -1,0 +1,241 @@
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: 1px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    flex: 1 1 0;
+}
+
+#largeView{
+    min-height: 100dvh;
+    width: 20%;
+    background-color: #353A40;
+    justify-items: center;
+}
+
+#largeView h1{
+    color: white;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    min-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+.buttons a{
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+    min-width: max-content;
+    height: 5em;
+    background-color: #353A40;
+    color: white;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
+
+}
+
+.buttons a:hover{
+    background-color: #4A4F55;
+    cursor: pointer;
+    transition: 250ms;
+
+}
+
+.buttons a:hover::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+}
+
+.buttons a.active {
+    background-color: #4A4F55;
+}
+
+
+
+
+#smallView{
+    border: 2px lime solid;
+    width: 100%;
+    height: 3em;
+    background-color: #353A40;
+    display: none;
+    align-items: center;
+    position: static;
+}
+
+#smallView input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 3em;
+    width: 3em;
+    border: 2px lime solid;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#smallView input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c9";
+    font-weight: 600;
+    color: white;
+    font-size: 2em;
+
+}
+
+#smallView input[type="checkbox"]:checked{
+    transform: rotate(90deg);
+    transition: 250ms;
+}
+#smallView label svg{
+    width: 2em;
+    padding: .4em;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#smallView #content{
+    background-color: #353A40;
+    height: fit-content;
+    width: 10em;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+#check:checked + #content {
+    display: flex;
+    transition: 0.25s ease-in-out;
+}
+
+#smallView #content a{
+
+    align-content: center;
+    width: inherit;
+    text-decoration: none;
+    color: white;
+    font-family: "poppins";
+    backdrop-filter: blur(2px);
+    height: 3em;
+    flex-basis: 3em;
+
+}
+
+#smallView #content a:hover{
+    background-color: #4A4F55;
+}
+
+
+
+@media (max-width: 1000px){
+    body{
+        flex-direction: column;
+    }
+
+    #largeView{
+        display: none;
+    }
+
+    #smallView{
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:target{
+    display: none;
+
+}
+
+
+.content{
+    min-height: 100dvh;
+    width: fit-content;
+    flex-grow: 1;
+    justify-items: center;
+}
+
+.content h1{
+    
+    width: 100%;
+    text-align: center;
+    padding: 1em 0em 1em 0em;
+}
+
+#Accounts table {
+    border: 1px solid black;
+    width: 80%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures all columns have the same width */
+}
+
+#Accounts table th,
+#Accounts table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    width: 16.66%; /* Equal width for 6 columns */
+    overflow: auto;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#Accounts table th {
+    background-color: #353A40;
+    color: white;
+}
